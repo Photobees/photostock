@@ -37,6 +37,3 @@ next-env.d.ts
 
 .vercel
 
-#firebase
-firebase-debug.log
-.firebase

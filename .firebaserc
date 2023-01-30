@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "photostock-live"
-  }
+    "default": "photostock-dev-01",
+    "devserver01": "photostock-dev-01"
+  },
+  "targets": {},
+  "etags": {}
 }

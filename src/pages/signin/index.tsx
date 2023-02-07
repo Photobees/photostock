@@ -3,21 +3,25 @@ import { Button } from "antd";
 import cx from "classnames";
 
 import { unbounded, outfit } from "@/lib/fonts";
-
+import useActionHandler from "@/lib/hooks/useActionHandler";
 import Form from "@/components/organisms/Form/Form";
+
 import getFormFields from "@/pageResources/signin/form.fields";
 import getFormSections from "@/pageResources/signin/form.sections";
+import signInActionHandlers, {
+  ILocalState,
+} from "@/pageResources/signin/actionHandlers";
 
 import styles from "./signin.module.css";
 
 const LoginPage: React.FC = () => {
   const [isSignIn, setSignIn] = useState(true);
+  const { localState, onAction } =
+    useActionHandler<ILocalState>(signInActionHandlers);
 
   const toggleIsSignIn = useCallback(() => {
     setSignIn((prev) => !prev);
   }, [setSignIn]);
-
-  const onAction = (data: any) => console.log(data);
 
   return (
     <div className={styles.authForm}>

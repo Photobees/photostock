@@ -1,0 +1,10 @@
+.formRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.errorMessage {
+  font-size: small;
+  color: red;
+  margin-top: 0.5rem;
+}

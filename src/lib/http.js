@@ -11,6 +11,10 @@ class Http {
   get(url, data) {
     return this.axiosInstance({ method: "GET", url, params: data });
   }
+
+  post(url, data) {
+    return this.axiosInstance({ method: "POST", url, data });
+  }
 }
 
 const httpClient = new Http("/api");
